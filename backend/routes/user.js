@@ -35,12 +35,13 @@ router.get('/dashboard', authenticate, (req, res) => {
         data: {
             message: 'Welcome to Amdox ERP Dashboard',
             modules: [
-                { id: 'finance', name: 'Financial Ledger', icon: '💰', status: 'coming_soon' },
-                { id: 'hr', name: 'HR & Payroll', icon: '👥', status: 'coming_soon' },
-                { id: 'scm', name: 'Supply Chain', icon: '📦', status: 'coming_soon' },
-                { id: 'project', name: 'Project Management', icon: '📋', status: 'coming_soon' },
-                { id: 'bi', name: 'Business Intelligence', icon: '📊', status: 'coming_soon' },
-                { id: 'ai', name: 'AI Forecasting', icon: '🤖', status: 'coming_soon' }
+                { id: 'dashboard', name: 'Dashboard', icon: '🏠', status: 'active', url: 'dashboard.html', desc: 'General Overview & Management' },
+                { id: 'hr', name: 'HR & Payroll', icon: '👥', status: 'active', url: 'hr.html', desc: 'Human Resources & Compensation' },
+                { id: 'finance', name: 'Financial Ledger', icon: '💰', status: 'active', url: 'finance.html', desc: 'Ledger, AP/AR & Accounting' },
+                { id: 'scm', name: 'Supply Chain', icon: '📦', status: 'active', url: 'supply.html', desc: 'Inventory, Vendors & Logistics' },
+                { id: 'project', name: 'Project Management', icon: '📋', status: 'active', url: 'projects.html', desc: 'Resource Allocation & Tracking' },
+                { id: 'ai', name: 'AI Forecast', icon: '📈', status: 'active', url: 'forecast.html', desc: 'Predictive Demand Planning' },
+                { id: 'bi', name: 'Analytics', icon: '📉', status: 'active', url: 'analytics.html', desc: 'Business Intelligence & Reports' }
             ]
         }
     });

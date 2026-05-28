@@ -90,12 +90,12 @@
                 if (result.success && result.data.modules) {
                     const grid = document.getElementById('modules-grid');
                     grid.innerHTML = result.data.modules.map(mod => `
-                        <div class="module-card" role="button" tabindex="0" aria-label="${mod.name} module">
+                        <a href="${mod.url}" class="module-card" aria-label="${mod.name} module" style="text-decoration: none; display: block;">
                             <div class="module-icon">${mod.icon}</div>
                             <h3>${mod.name}</h3>
-                            <p>Full module coming soon. Part of the Amdox ERP enterprise suite.</p>
-                            <span class="module-status">Coming Soon</span>
-                        </div>
+                            <p>${mod.desc}</p>
+                            <span class="module-status" style="color: var(--brand-secondary); background: rgba(0, 210, 255, 0.1); border-color: rgba(0, 210, 255, 0.2);">Active Module</span>
+                        </a>
                     `).join('');
                 }
             } catch (err) {

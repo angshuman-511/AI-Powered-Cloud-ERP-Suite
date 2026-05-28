@@ -50,6 +50,11 @@ getDatabase();
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/user', require('./routes/user'));
+app.use('/api/finance', require('./routes/finance'));
+app.use('/api/hr', require('./routes/hr'));
+app.use('/api/supply', require('./routes/supply'));
+app.use('/api/projects', require('./routes/projects'));
+app.use('/api/analytics', require('./routes/analytics'));
 
 
 app.get('/health/live', (req, res) => {

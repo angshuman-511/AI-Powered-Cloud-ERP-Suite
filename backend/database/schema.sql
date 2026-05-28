@@ -87,3 +87,65 @@ CREATE INDEX IF NOT EXISTS idx_audit_created ON audit_logs(created_at);
 
 -- Seed default tenant
 INSERT OR IGNORE INTO tenants (id, name, domain) VALUES ('default', 'Amdox Technologies', 'amdox.com');
+
+-- Employees Table (HR & Payroll)
+CREATE TABLE IF NOT EXISTS employees (
+    id TEXT PRIMARY KEY,
+    employee_code TEXT UNIQUE,
+    full_name TEXT NOT NULL,
+    email TEXT UNIQUE,
+    phone TEXT,
+    department TEXT NOT NULL,
+    position TEXT NOT NULL,
+    salary REAL DEFAULT 0,
+    hire_date DATE,
+    status TEXT DEFAULT 'active',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Transactions Table (Finance Ledger)
+CREATE TABLE IF NOT EXISTS transactions (
+    id TEXT PRIMARY KEY,
+    type TEXT NOT NULL,
+    category TEXT NOT NULL,
+    description TEXT,
+    amount REAL DEFAULT 0,
+    date DATE NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Projects Table (Project Management)
+CREATE TABLE IF NOT EXISTS projects (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    client TEXT,
+    status TEXT DEFAULT 'planning',
+    start_date DATE,
+    end_date DATE,
+    budget REAL DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tasks Table (Project Management)
+CREATE TABLE IF NOT EXISTS tasks (
+    id TEXT PRIMARY KEY,
+    project_id TEXT NOT NULL,
+    name TEXT NOT NULL,
+    assignee TEXT,
+    status TEXT DEFAULT 'pending',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
+);
+
+-- Inventory Items Table (Supply Chain)
+CREATE TABLE IF NOT EXISTS inventory_items (
+    id TEXT PRIMARY KEY,
+    sku TEXT UNIQUE,
+    name TEXT NOT NULL,
+    category TEXT,
+    quantity INTEGER DEFAULT 0,
+    unit_price REAL DEFAULT 0,
+    supplier TEXT,
+    status TEXT DEFAULT 'in_stock',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
