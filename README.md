@@ -107,4 +107,4 @@ amdox/
 
 ---
 
-*Amdox Technologies • Engineering Division • April 2026*
+*Amdox Technologies • April 2026*
