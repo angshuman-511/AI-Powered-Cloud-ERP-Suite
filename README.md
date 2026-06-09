@@ -15,11 +15,11 @@ The **Amdox ERP Suite** is a scalable, cloud-native ERP platform that consolidat
 
 ### ✨ Key Features
 - **Strict Role-Based Access Control (RBAC)**: Users are bound to specific module dashboards. Only users with the `super_admin` role can bypass module restrictions.
+- **Project Management**: Active Projects, Gantt Timeline Visualization, Resource Allocation, and Budget Tracking.
 - **Financial Ledger**: General Ledger, AP/AR Automation, Multi-Currency Management, and Period Close tracking.
+- **AI Forecasting & Analytics**: Predictive dashboards for revenue forecasting and resource planning.
 - **HR & Payroll Engine**: Employee Directory, Leave Management, Payroll Processing, and Compliance.
 - **Supply Chain**: Inventory Management, PO Lifecycle, Vendor Portal, and Reorder Automation.
-- **Project Management**: Active Projects, Gantt Timeline Visualization, Resource Allocation, and Budget Tracking.
-- **AI Forecasting & Analytics**: Predictive dashboards for revenue forecasting and resource planning.
 
 ---
 
@@ -98,6 +98,8 @@ amdox/
 │
 └── README.md
 ```
+
+---
 
 ## 🛡️ Security Features
 - **JWT Authentication**: Secure access and refresh token rotation.
