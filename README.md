@@ -96,7 +96,8 @@ amdox/
 │       ├── schema.sql       # Enterprise SQL table schemas
 │       └── amdox_erp.db     # Local SQLite database
 │
-└── README.md
+├── README.md
+└── UI-UX Asset.pdf
 ```
 
 ---
