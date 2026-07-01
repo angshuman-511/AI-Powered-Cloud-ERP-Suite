@@ -64,7 +64,7 @@ You can also register a standard account via the `/register.html` page. Standard
 
 ```
 amdox/
-├── frontend/                 # Client-side application
+├── frontend/                # Client-side application
 │   ├── index.html           # Guest landing / Module selector
 │   ├── login.html           # Role-specific login
 │   ├── dashboard.html       # Primary unified dashboard
@@ -80,7 +80,7 @@ amdox/
 │       ├── app.js           # Auth guards & UI utilities
 │       └── login.js         # Session management
 │
-├── backend/                  # Server-side API
+├── backend/                 # Server-side API
 │   ├── server.js            # Express entry point
 │   ├── config/
 │   │   └── database.js      # SQLite connection & seed logic
